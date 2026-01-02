@@ -1,247 +1,75 @@
 INFO:     Will watch for changes in these directories: ['/home/yegor/workspace/health/backend']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [9108] using WatchFiles
-INFO:     Started server process [9111]
+INFO:     Started reloader process [22552] using WatchFiles
+INFO:     Started server process [22555]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 🚀 Starting Health Tracker API...
 ✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_212726.json
-INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
-WARNING:  WatchFiles detected changes in 'app/models/workout.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [9111]
-🛑 Shutting down Health Tracker API...
-✅ Final backup created: backups/workouts_backup_20260101_213003.json
-✅ Database connection closed
-INFO:     Started server process [9716]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  WatchFiles detected changes in 'app/models/workout.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [9716]
-🚀 Starting Health Tracker API...
-✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_213004.json
-🛑 Shutting down Health Tracker API...
-✅ Final backup created: backups/workouts_backup_20260101_213010.json
-✅ Database connection closed
-INFO:     Started server process [9775]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  WatchFiles detected changes in 'app/routes/workouts.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [9775]
-🚀 Starting Health Tracker API...
-✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_213011.json
-🛑 Shutting down Health Tracker API...
-✅ Final backup created: backups/workouts_backup_20260101_213021.json
-✅ Database connection closed
-INFO:     Started server process [9849]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-🚀 Starting Health Tracker API...
-✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_213021.json
-INFO:     127.0.0.1:46060 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46066 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54306 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54314 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54316 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54326 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47148 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47156 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47148 - "GET /api/workouts/types HTTP/1.1" 200 OK
-WARNING:  WatchFiles detected changes in 'app/models/workout.py', 'app/routes/workouts.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [9849]
-🛑 Shutting down Health Tracker API...
-✅ Final backup created: backups/workouts_backup_20260101_213123.json
-✅ Database connection closed
-INFO:     Started server process [10194]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-WARNING:  WatchFiles detected changes in 'app/models/workout.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [10194]
-🚀 Starting Health Tracker API...
-✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_213124.json
-🛑 Shutting down Health Tracker API...
-✅ Final backup created: backups/workouts_backup_20260101_213632.json
-✅ Database connection closed
-INFO:     Started server process [11200]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-🚀 Starting Health Tracker API...
-✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_213632.json
-INFO:     127.0.0.1:50562 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50568 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50578 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50586 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60026 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60028 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42416 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42418 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42416 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42416 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48926 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48940 - "GET /api/workouts/ HTTP/1.1" 200 OK
-WARNING:  WatchFiles detected changes in 'app/models/workout.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [11200]
-🛑 Shutting down Health Tracker API...
-✅ Final backup created: backups/workouts_backup_20260101_214027.json
-✅ Database connection closed
-INFO:     Started server process [12069]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-🚀 Starting Health Tracker API...
-✅ Database connected
-✅ Initial backup created: backups/workouts_backup_20260101_214027.json
-INFO:     127.0.0.1:43212 - "OPTIONS /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43212 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:43212 - "GET /api/workouts/types HTTP/1.1" 200 OK
+✅ Initial backup created: backups/workouts_backup_20260101_222759.json
+INFO:     127.0.0.1:43732 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43740 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43746 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43756 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     172.29.212.225:50838 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52630 - "POST /api/workouts HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:56326 - "POST /api/workouts HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:56330 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60550 - "POST /api/workouts HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52144 - "POST /api/workouts/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52148 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52152 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52148 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52168 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33382 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33396 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33408 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33422 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46066 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46074 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41098 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41100 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41104 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41108 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49576 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49586 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43218 - "GET /api/workouts/types HTTP/1.1" 200 OK
 INFO:     127.0.0.1:43228 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43228 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43212 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47470 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47486 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47502 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47506 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47506 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47502 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33424 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33426 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33426 - "OPTIONS /api/workouts/1 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33426 - "DELETE /api/workouts/1 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:33424 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33426 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33426 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33424 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55110 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55124 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55110 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:55110 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55124 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55124 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55110 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55124 - "OPTIONS /api/workouts/2 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55110 - "DELETE /api/workouts/2 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:55124 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55110 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55124 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55110 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44804 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44806 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37898 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37908 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37898 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37898 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36174 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36184 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59382 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59392 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45446 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45448 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45446 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:45446 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45448 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45448 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45446 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49652 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:49652 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49658 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49652 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49658 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52590 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52604 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52604 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52590 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52936 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52952 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41900 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41912 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56318 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56320 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57758 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57770 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48896 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48898 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33450 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33466 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35354 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35366 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "OPTIONS /api/workouts/4 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "DELETE /api/workouts/4 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "OPTIONS /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "OPTIONS /api/workouts/3 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "DELETE /api/workouts/3 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "OPTIONS /api/workouts/5 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "DELETE /api/workouts/5 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "OPTIONS /api/workouts/6 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "DELETE /api/workouts/6 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "OPTIONS /api/workouts/8 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "DELETE /api/workouts/8 HTTP/1.1" 204 No Content
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "POST /api/workouts/ HTTP/1.1" 201 Created
-INFO:     127.0.0.1:51278 - "GET /api/workouts/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51278 - "GET /api/workouts/types HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51294 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42978 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51430 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51434 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46308 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46314 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55636 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55644 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42504 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42506 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48222 - "OPTIONS /api/workouts/11 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48222 - "DELETE /api/workouts/11 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:48222 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48226 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48226 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48222 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48226 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48222 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "OPTIONS /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "POST /api/workouts/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:41408 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41414 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41414 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "POST /api/workouts/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:41408 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41414 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41408 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41414 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41416 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60908 - "DELETE /api/workouts/10 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:60916 - "DELETE /api/workouts/7 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:47060 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35194 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35204 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35204 - "GET /api/workouts/types HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35204 - "GET /api/workouts/ HTTP/1.1" 200 OK

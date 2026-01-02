@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     # Server Config
     host: str = "0.0.0.0"
     port: int = 8000
-    cors_origins: str = "http://localhost:5173,http://localhost:3000"
+    cors_origins: str = "*"  # Allow all origins for local network access
     
     # Database Config
     db_path: str = "./data/health.db"
