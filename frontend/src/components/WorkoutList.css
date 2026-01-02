@@ -6,7 +6,7 @@
 }
 
 .today-section {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .today-section h2 {
@@ -28,10 +28,13 @@
   margin-top: 24px;
 }
 
+.activity-section {
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+
 .history-section {
   margin-top: 48px;
-  padding-top: 32px;
-  border-top: 2px solid #e0e0e0;
 }
 
 .history-section h2 {

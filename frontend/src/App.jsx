@@ -13,8 +13,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>💪 Health Tracker</h1>
-        <p>Track your workouts and build healthy habits</p>
+        <h1>Health Tracker</h1>
       </header>
       
       <main className="app-main">
@@ -22,10 +21,6 @@ function App() {
           <WorkoutList refreshTrigger={refreshTrigger} onWorkoutAdded={handleWorkoutAdded} />
         </div>
       </main>
-      
-      <footer className="app-footer">
-        <p>Health Tracker v1.0.0</p>
-      </footer>
     </div>
   );
 }

@@ -1,16 +1,10 @@
 import { useMemo } from 'react';
+import { WORKOUT_CONFIG } from '../constants/workoutColors';
 import './WorkoutCalendar.css';
 
 function WorkoutCalendar({ workouts }) {
-  // Define workout colors and priority
-  const workoutConfig = {
-    'Yoga': { color: '#9C27B0', priority: 1 },
-    'Kettlebell Training': { color: '#FF5722', priority: 2 },
-    'Powerlifting': { color: '#F44336', priority: 3 },
-    'Golf': { color: '#4CAF50', priority: 4 },
-    'Running': { color: '#2196F3', priority: 5 },
-    'Hiking': { color: '#795548', priority: 6 }
-  };
+  // Use workout config from constants
+  const workoutConfig = WORKOUT_CONFIG;
 
   // Generate calendar data organized by month (last 3 months)
   const monthsData = useMemo(() => {
@@ -196,20 +190,7 @@ function WorkoutCalendar({ workouts }) {
 
   return (
     <div className="workout-calendar">
-      <h2>Activity Calendar</h2>
-      
-      {/* Legend */}
-      <div className="calendar-legend">
-        {Object.entries(workoutConfig).map(([type, config]) => (
-          <div key={type} className="legend-item">
-            <div 
-              className="legend-color" 
-              style={{ backgroundColor: config.color }}
-            ></div>
-            <span className="legend-label">{type}</span>
-          </div>
-        ))}
-      </div>
+      <h2>Activity</h2>
 
       {/* Monthly Calendars */}
       <div className="months-container">

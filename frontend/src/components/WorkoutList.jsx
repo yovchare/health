@@ -138,7 +138,6 @@ function WorkoutList({ refreshTrigger, onWorkoutAdded }) {
     <div className="workout-list">
       <section className="today-section">
         <h2>Today's Workouts</h2>
-        <p className="section-subtitle">Tap a workout to log or unlog it for today</p>
         <div className="workout-cards-grid">
           {workoutTypes.map(type => (
             <WorkoutCard
@@ -154,7 +153,9 @@ function WorkoutList({ refreshTrigger, onWorkoutAdded }) {
       </section>
 
       {/* Calendar View */}
-      <WorkoutCalendar workouts={allWorkouts} />
+      <section className="activity-section">
+        <WorkoutCalendar workouts={allWorkouts} />
+      </section>
 
       {recentWorkouts.length > 0 && (
         <section className="history-section">

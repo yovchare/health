@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { WORKOUT_COLORS } from '../constants/workoutColors';
 import './WorkoutCard.css';
 
 function WorkoutCard({ workoutType, onLog, onUnlog, isLoggedToday, todayWorkoutId }) {
@@ -21,23 +22,13 @@ function WorkoutCard({ workoutType, onLog, onUnlog, isLoggedToday, todayWorkoutI
     }
   };
 
-  // Map workout types to colors (matching calendar colors)
-  const colorMap = {
-    'Yoga': '#9C27B0',
-    'Running': '#2196F3',
-    'Hiking': '#795548',
-    'Powerlifting': '#F44336',
-    'Kettlebell Training': '#FF5722',
-    'Golf': '#4CAF50'
-  };
-
-  const workoutColor = colorMap[workoutType] || '#666';
+  const workoutColor = WORKOUT_COLORS[workoutType] || '#666';
 
   return (
     <div 
       className={`workout-card ${isLoggedToday ? 'logged' : ''} ${isLogging ? 'logging' : ''}`}
       onClick={handleClick}
-      style={{ borderColor: workoutColor }}
+      style={{ boxShadow: `-4px 0 0 0 ${workoutColor}` }}
     >
       <div className="card-content">
         <div className="workout-name">{workoutType}</div>
