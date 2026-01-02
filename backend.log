@@ -1,0 +1,13 @@
+INFO:     Will watch for changes in these directories: ['/home/yegor/workspace/health/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [9108] using WatchFiles
+INFO:     Started server process [9111]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+🚀 Starting Health Tracker API...
+✅ Database connected
+✅ Initial backup created: backups/workouts_backup_20260101_212726.json
+INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35184 - "GET /api/workouts/ HTTP/1.1" 200 OK

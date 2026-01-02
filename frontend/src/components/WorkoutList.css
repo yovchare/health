@@ -1,0 +1,99 @@
+.workout-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.workout-list h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.workout-list-loading,
+.workout-list-error,
+.workout-list-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.workout-list-error {
+  color: #c62828;
+  background-color: #ffebee;
+  border-radius: 4px;
+}
+
+.workouts {
+  display: grid;
+  gap: 1rem;
+}
+
+.workout-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.workout-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.workout-header h3 {
+  margin: 0;
+  color: #4CAF50;
+  font-size: 1.25rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.workout-details p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.workout-date {
+  font-weight: 500;
+  color: #333;
+}
+
+.workout-duration {
+  font-size: 0.9rem;
+}
+
+.workout-notes {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  font-style: italic;
+  color: #777;
+}
