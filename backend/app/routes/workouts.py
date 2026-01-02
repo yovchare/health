@@ -4,12 +4,18 @@ Workout routes for CRUD operations
 from fastapi import APIRouter, HTTPException
 from typing import List
 from datetime import date as date_type
-from app.models.workout import Workout, WorkoutCreate, WorkoutUpdate
+from app.models.workout import Workout, WorkoutCreate, WorkoutUpdate, WorkoutType
 from app.services.database import db_service
 from app.services.backup import backup_service
 
 
 router = APIRouter(prefix="/workouts", tags=["workouts"])
+
+
+@router.get("/types", response_model=List[str])
+async def get_workout_types():
+    """Get all available workout types"""
+    return [workout_type.value for workout_type in WorkoutType]
 
 
 @router.post("/", response_model=Workout, status_code=201)

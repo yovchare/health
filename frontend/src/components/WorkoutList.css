@@ -1,65 +1,90 @@
 .workout-list {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.workout-list h2 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+.today-section {
+  margin-bottom: 48px;
+}
+
+.today-section h2 {
+  font-size: 28px;
   color: #333;
+  margin-bottom: 8px;
 }
 
-.workout-list-loading,
-.workout-list-error,
-.workout-list-empty {
-  text-align: center;
-  padding: 2rem;
+.section-subtitle {
   color: #666;
+  margin-bottom: 24px;
+  font-size: 16px;
 }
 
-.workout-list-error {
-  color: #c62828;
-  background-color: #ffebee;
-  border-radius: 4px;
-}
-
-.workouts {
+.workout-cards-grid {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
 }
 
-.workout-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: box-shadow 0.2s;
+.history-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 2px solid #e0e0e0;
 }
 
-.workout-card:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.history-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.workout-header {
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-.workout-header h3 {
-  margin: 0;
-  color: #4CAF50;
-  font-size: 1.25rem;
+.history-item:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.history-content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 1;
+}
+
+.history-type {
+  font-weight: 600;
+  color: #333;
+  min-width: 150px;
+}
+
+.history-date {
+  color: #666;
+  font-size: 14px;
 }
 
 .delete-btn {
   background: none;
   border: none;
   color: #999;
-  font-size: 2rem;
-  line-height: 1;
+  font-size: 28px;
   cursor: pointer;
   padding: 0;
   width: 32px;
@@ -68,32 +93,55 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+  line-height: 1;
 }
 
 .delete-btn:hover {
-  background-color: #ffebee;
-  color: #c62828;
+  background: #ffebee;
+  color: #f44336;
 }
 
-.workout-details p {
-  margin: 0.5rem 0;
+.workout-list-loading,
+.workout-list-error {
+  text-align: center;
+  padding: 48px 20px;
+  font-size: 18px;
   color: #666;
 }
 
-.workout-date {
-  font-weight: 500;
-  color: #333;
+.workout-list-error {
+  color: #f44336;
+  background: #ffebee;
+  border-radius: 8px;
+  padding: 24px;
 }
 
-.workout-duration {
-  font-size: 0.9rem;
-}
+@media (max-width: 768px) {
+  .workout-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-.workout-notes {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #f0f0f0;
-  font-style: italic;
-  color: #777;
+  .today-section h2 {
+    font-size: 24px;
+  }
+
+  .history-section h2 {
+    font-size: 20px;
+  }
+
+  .history-item {
+    padding: 12px 16px;
+  }
+
+  .history-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .history-type {
+    min-width: auto;
+  }
 }

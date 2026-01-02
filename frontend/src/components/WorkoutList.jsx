@@ -1,26 +1,71 @@
 import { useState, useEffect } from 'react';
 import apiService from '../services/api';
+import WorkoutCard from './WorkoutCard';
+import WorkoutCalendar from './WorkoutCalendar';
 import './WorkoutList.css';
 
-function WorkoutList({ refreshTrigger }) {
-  const [workouts, setWorkouts] = useState([]);
+function WorkoutList({ refreshTrigger, onWorkoutAdded }) {
+  const [workoutTypes, setWorkoutTypes] = useState([]);
+  const [todaysWorkouts, setTodaysWorkouts] = useState([]);
+  const [recentWorkouts, setRecentWorkouts] = useState([]);
+  const [allWorkouts, setAllWorkouts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchWorkouts();
+    fetchData();
   }, [refreshTrigger]);
 
-  const fetchWorkouts = async () => {
+  const fetchData = async () => {
     try {
       setLoading(true);
       setError(null);
-      const data = await apiService.fetchWorkouts();
-      setWorkouts(data);
+      
+      // Fetch workout types and workouts in parallel
+      const [types, workouts] = await Promise.all([
+        apiService.getWorkoutTypes(),
+        apiService.fetchWorkouts()
+      ]);
+      
+      setWorkoutTypes(types);
+      
+      // Store all workouts for calendar
+      setAllWorkouts(workouts);
+      
+      // Filter today's workouts
+      const today = new Date().toISOString().split('T')[0];
+      const todayWorkouts = workouts.filter(w => w.date === today);
+      setTodaysWorkouts(todayWorkouts);
+      
+      // Get recent workouts (last 7 days, excluding today)
+      const recent = workouts.filter(w => w.date !== today).slice(0, 10);
+      setRecentWorkouts(recent);
+      
     } catch (err) {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleLogWorkout = async (workoutType) => {
+    try {
+      const today = new Date().toISOString().split('T')[0];
+      await apiService.createWorkout({
+        workout_type: workoutType,
+        date: today,
+        duration_minutes: null,
+        notes: null
+      });
+      
+      // Refresh data
+      await fetchData();
+      
+      if (onWorkoutAdded) {
+        onWorkoutAdded();
+      }
+    } catch (err) {
+      alert('Failed to log workout: ' + err.message);
     }
   };
 
@@ -31,7 +76,7 @@ function WorkoutList({ refreshTrigger }) {
 
     try {
       await apiService.deleteWorkout(id);
-      setWorkouts(workouts.filter(w => w.id !== id));
+      await fetchData();
     } catch (err) {
       alert('Failed to delete workout: ' + err.message);
     }
@@ -39,59 +84,100 @@ function WorkoutList({ refreshTrigger }) {
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    
+    const dateStr = date.toISOString().split('T')[0];
+    const todayStr = today.toISOString().split('T')[0];
+    const yesterdayStr = yesterday.toISOString().split('T')[0];
+    
+    if (dateStr === todayStr) return 'Today';
+    if (dateStr === yesterdayStr) return 'Yesterday';
+    
     return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+      month: 'short', 
+      day: 'numeric',
+      year: date.getFullYear() !== today.getFullYear() ? 'numeric' : undefined
     });
   };
 
+  const isWorkoutLoggedToday = (workoutType) => {
+    return todaysWorkouts.some(w => w.workout_type === workoutType);
+  };
+
+  const getTodayWorkoutId = (workoutType) => {
+    const workout = todaysWorkouts.find(w => w.workout_type === workoutType);
+    return workout ? workout.id : null;
+  };
+
+  const handleUnlogWorkout = async (workoutId) => {
+    if (!workoutId) return;
+    
+    try {
+      await apiService.deleteWorkout(workoutId);
+      await fetchData();
+      
+      if (onWorkoutAdded) {
+        onWorkoutAdded();
+      }
+    } catch (err) {
+      alert('Failed to remove workout: ' + err.message);
+    }
+  };
+
   if (loading) {
-    return <div className="workout-list-loading">Loading workouts...</div>;
+    return <div className="workout-list-loading">Loading...</div>;
   }
 
   if (error) {
     return <div className="workout-list-error">Error: {error}</div>;
   }
 
-  if (workouts.length === 0) {
-    return (
-      <div className="workout-list-empty">
-        <p>No workouts logged yet. Start by adding your first workout!</p>
-      </div>
-    );
-  }
-
   return (
     <div className="workout-list">
-      <h2>Workout History</h2>
-      <div className="workouts">
-        {workouts.map(workout => (
-          <div key={workout.id} className="workout-card">
-            <div className="workout-header">
-              <h3>{workout.workout_type}</h3>
-              <button 
-                className="delete-btn"
-                onClick={() => handleDelete(workout.id)}
-                title="Delete workout"
-              >
-                ×
-              </button>
-            </div>
-            <div className="workout-details">
-              <p className="workout-date">{formatDate(workout.date)}</p>
-              {workout.duration_minutes && (
-                <p className="workout-duration">
-                  Duration: {workout.duration_minutes} minutes
-                </p>
-              )}
-              {workout.notes && (
-                <p className="workout-notes">{workout.notes}</p>
-              )}
-            </div>
+      <section className="today-section">
+        <h2>Today's Workouts</h2>
+        <p className="section-subtitle">Tap a workout to log or unlog it for today</p>
+        <div className="workout-cards-grid">
+          {workoutTypes.map(type => (
+            <WorkoutCard
+              key={type}
+              workoutType={type}
+              onLog={handleLogWorkout}
+              onUnlog={handleUnlogWorkout}
+              isLoggedToday={isWorkoutLoggedToday(type)}
+              todayWorkoutId={getTodayWorkoutId(type)}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Calendar View */}
+      <WorkoutCalendar workouts={allWorkouts} />
+
+      {recentWorkouts.length > 0 && (
+        <section className="history-section">
+          <h2>Recent History</h2>
+          <div className="history-list">
+            {recentWorkouts.map(workout => (
+              <div key={workout.id} className="history-item">
+                <div className="history-content">
+                  <span className="history-type">{workout.workout_type}</span>
+                  <span className="history-date">{formatDate(workout.date)}</span>
+                </div>
+                <button 
+                  className="delete-btn"
+                  onClick={() => handleDelete(workout.id)}
+                  title="Delete workout"
+                >
+                  ×
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </section>
+      )}
     </div>
   );
 }

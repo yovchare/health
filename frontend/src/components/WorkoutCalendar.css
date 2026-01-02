@@ -1,0 +1,302 @@
+.workout-calendar {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.workout-calendar h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Legend */
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.legend-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Months Container */
+.months-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual Month Calendar */
+.month-calendar {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.month-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  padding: 10px 12px;
+  margin: 0;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+/* Calendar Container */
+.calendar-container {
+  padding: 12px;
+}
+
+.calendar-day-labels {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 4px;
+  padding: 0 1px;
+}
+
+.calendar-day-labels span {
+  font-size: 9px;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.calendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+/* Calendar Cells */
+.calendar-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.calendar-cell .cell-date {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  font-size: 8px;
+  font-weight: 600;
+  z-index: 1;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.calendar-cell.no-workout .cell-date {
+  color: #999;
+}
+
+.calendar-cell.single-workout .cell-date,
+.calendar-cell.dual-workout .cell-date {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-cell.empty {
+  cursor: default;
+  background: transparent;
+  border: none;
+}
+
+.calendar-cell.no-workout {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+}
+
+.calendar-cell.no-workout:hover {
+  background: #eeeeee;
+  transform: scale(1.1);
+}
+
+.calendar-cell.single-workout {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.calendar-cell.single-workout:hover,
+.calendar-cell.dual-workout:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.calendar-cell.today {
+  border: 2px solid #333;
+  border-style: solid;
+}
+
+.calendar-cell.today.no-workout {
+  border-color: #666;
+}
+
+/* Dual workout SVG */
+.calendar-cell.dual-workout svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .months-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .month-title {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .calendar-container {
+    padding: 16px;
+  }
+
+  .calendar-day-labels span {
+    font-size: 10px;
+  }
+
+  .calendar-grid {
+    gap: 3px;
+  }
+
+  .calendar-week {
+    gap: 3px;
+  }
+
+  .calendar-cell .cell-date {
+    font-size: 9px;
+    top: 2px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .months-container {
+    gap: 16px;
+  }
+
+  .month-title {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .calendar-legend {
+    gap: 12px;
+  }
+
+  .legend-label {
+    font-size: 12px;
+  }
+
+  .legend-color {
+    width: 16px;
+    height: 16px;
+  }
+
+  .calendar-container {
+    padding: 12px;
+  }
+
+  .calendar-day-labels {
+    gap: 2px;
+  }
+
+  .calendar-day-labels span {
+    font-size: 9px;
+  }
+
+  .calendar-grid {
+    gap: 2px;
+  }
+
+  .calendar-week {
+    gap: 2px;
+  }
+
+  .calendar-cell {
+    border-radius: 2px;
+  }
+
+  .calendar-cell .cell-date {
+    font-size: 8px;
+    top: 1px;
+    left: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workout-calendar h2 {
+    font-size: 20px;
+  }
+
+  .months-container {
+    gap: 16px;
+  }
+
+  .month-title {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .calendar-legend {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .legend-item {
+    gap: 6px;
+  }
+
+  .legend-label {
+    font-size: 11px;
+  }
+
+  .calendar-day-labels span {
+    font-size: 8px;
+  }
+
+  .calendar-cell .cell-date {
+    font-size: 7px;
+    top: 1px;
+    left: 2px;
+  }
+}

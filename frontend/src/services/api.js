@@ -5,6 +5,14 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 class ApiService {
+  async getWorkoutTypes() {
+    const response = await fetch(`${API_BASE_URL}/workouts/types`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch workout types');
+    }
+    return response.json();
+  }
+
   async fetchWorkouts(startDate = null, endDate = null) {
     let url = `${API_BASE_URL}/workouts/`;
     const params = new URLSearchParams();

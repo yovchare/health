@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import apiService from '../services/api';
 import './WorkoutForm.css';
 
@@ -9,20 +9,24 @@ function WorkoutForm({ onWorkoutAdded }) {
     duration_minutes: '',
     notes: ''
   });
+  const [workoutTypes, setWorkoutTypes] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  const workoutTypes = [
-    'Running',
-    'Cycling',
-    'Swimming',
-    'Weights',
-    'Yoga',
-    'Walking',
-    'HIIT',
-    'Sports',
-    'Other'
-  ];
+  // Fetch workout types from API
+  useEffect(() => {
+    const fetchWorkoutTypes = async () => {
+      try {
+        const types = await apiService.getWorkoutTypes();
+        setWorkoutTypes(types);
+      } catch (err) {
+        console.error('Failed to fetch workout types:', err);
+        // Fallback to hardcoded list if API fails
+        setWorkoutTypes(['Yoga', 'Running', 'Hiking', 'Powerlifting', 'Kettlebell Training']);
+      }
+    };
+    fetchWorkoutTypes();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

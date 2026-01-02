@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import WorkoutForm from './components/WorkoutForm';
 import WorkoutList from './components/WorkoutList';
 import './App.css';
 
@@ -20,8 +19,7 @@ function App() {
       
       <main className="app-main">
         <div className="container">
-          <WorkoutForm onWorkoutAdded={handleWorkoutAdded} />
-          <WorkoutList refreshTrigger={refreshTrigger} />
+          <WorkoutList refreshTrigger={refreshTrigger} onWorkoutAdded={handleWorkoutAdded} />
         </div>
       </main>
       

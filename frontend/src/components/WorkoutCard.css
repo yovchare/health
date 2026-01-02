@@ -1,0 +1,106 @@
+.workout-card {
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.workout-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.workout-card.logged {
+  background: white;
+}
+
+.workout-card.logged:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.workout-card.logging {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.workout-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  flex: 1;
+}
+
+.workout-checkbox {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.workout-checkbox .checkmark {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .workout-card {
+    padding: 16px;
+    min-height: 100px;
+  }
+
+  .workout-name {
+    font-size: 16px;
+  }
+
+  .workout-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .workout-checkbox .checkmark {
+    font-size: 16px;
+  }
+}
